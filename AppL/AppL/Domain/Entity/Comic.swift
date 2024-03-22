@@ -39,23 +39,6 @@ struct Comic: Identifiable {
         self.format = format
         self.thumbnailURL = thumbnailURL
     }
-    
-    static func dummyComic() -> Comic {
-        return Comic(
-            id: 1,
-            title: "Dummy Comic",
-            description: "Dummy Comic Description",
-            modified: "Dummy Comic Modified",
-            isbn: "Dummy Comic ISBN",
-            upc: "Dummy Comic UPC",
-            diamondCode: "Dummy Comic Diamond Code",
-            ean: "Dummy Comic EAN",
-            issn: "Dummy Comic ISSN",
-            format: "Dummy Comic Format",
-            thumbnailURL: URL(string: "http://i.annihil.us/u/prod/marvel/i/mg/9/30/64762a4dbb0e7.jpg")
-        )
-        
-    }
 }
 
 extension Comic: Equatable {

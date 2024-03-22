@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578938762BADAF2E00149F39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578938742BADAF2E00149F39 /* Localizable.strings */; };
 		57A73B352BAC42DA00BA24ED /* APIValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A73B342BAC42DA00BA24ED /* APIValues.swift */; };
 		57A73B372BAC4D0200BA24ED /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A73B362BAC4D0200BA24ED /* DataParser.swift */; };
 		57A73B392BAC4D3F00BA24ED /* ComicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A73B382BAC4D3F00BA24ED /* ComicRequest.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		578938752BADAF2E00149F39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		57A73B342BAC42DA00BA24ED /* APIValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIValues.swift; sourceTree = "<group>"; };
 		57A73B362BAC4D0200BA24ED /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		57A73B382BAC4D3F00BA24ED /* ComicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRequest.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 		57E779DF2BAB427C00321AF1 = {
 			isa = PBXGroup;
 			children = (
+				578938742BADAF2E00149F39 /* Localizable.strings */,
 				57E779EA2BAB427C00321AF1 /* AppL */,
 				57E779FC2BAB427F00321AF1 /* AppLTests */,
 				57E77A062BAB427F00321AF1 /* AppLUITests */,
@@ -508,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E779F32BAB427E00321AF1 /* Preview Assets.xcassets in Resources */,
+				578938762BADAF2E00149F39 /* Localizable.strings in Resources */,
 				57E779F02BAB427E00321AF1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +624,17 @@
 			targetProxy = 57E77A042BAB427F00321AF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		578938742BADAF2E00149F39 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				578938752BADAF2E00149F39 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		57E77A0B2BAB427F00321AF1 /* Debug */ = {

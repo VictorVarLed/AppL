@@ -17,9 +17,9 @@ struct ComicsView: View {
                 List {
                     ForEach((0..<viewModel.comics.count), id: \.self)
                         {index in
-                            NavigationLink(destination: SecondView(comic: $viewModel.comics[index]), tag: viewModel.comics[index].title ?? "Unnamed", selection: $select)
+                            NavigationLink(destination: SecondView(comic: $viewModel.comics[index]), tag: viewModel.comics[index].title ?? "unnamed".localized(), selection: $select)
                             {
-                                Text(viewModel.comics[index].title ?? "Unnamed")
+                                Text(viewModel.comics[index].title ?? "unnamed".localized())
                                     .padding(.vertical, 2.0)
                             }
                         }
@@ -28,7 +28,7 @@ struct ComicsView: View {
                     .frame(width:160)
                     .listStyle(SidebarListStyle())
                 }
-                .navigationTitle("Comics")
+                .navigationTitle("comics".localized())
                 .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
     }
@@ -47,10 +47,10 @@ struct SecondView: View {
         } placeholder: {
         }
         
-        Text(comic.title ?? "Unnamed")
+        Text(comic.title ?? "unnamed".localized())
             .frame(height: 20)
         
-        Text(comic.description ?? "No description")
+        Text(comic.description ?? "nodescription".localized())
             .frame(height: 20)
     }
 }

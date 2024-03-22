@@ -14,6 +14,7 @@ struct AppLApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var Delegate
     
     init() {
+        // Inject dependencies
         Resolver.shared.injectModules()
     }
 
@@ -37,23 +38,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "book.pages", accessibilityDescription: "1")
         }
+        // Setup status bar options
         setupMenus()
         
+        // Setup restart on crash just in case the app crashes
         restartOnCrash()
     }
     
+    
+    // MARK: - Setup menus -
     func setupMenus() {
         let menu = NSMenu()
 
-        let comics = NSMenuItem(title: "Comics", action: #selector(didTapComics) , keyEquivalent: "1")
+        let comics = NSMenuItem(title: "comics".localized(), action: #selector(didTapComics) , keyEquivalent: "1")
         menu.addItem(comics)
         
-        let settings = NSMenuItem(title: "Settings", action: #selector(didTapSettings) , keyEquivalent: "2")
+        let settings = NSMenuItem(title: "settings".localized(), action: #selector(didTapSettings) , keyEquivalent: "2")
         menu.addItem(settings)
 
         menu.addItem(NSMenuItem.separator())
-
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "quit".localized(), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
     }
@@ -74,7 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         changeStatusBarButton(number: 1)
         let detailView = ComicsView();
          let controller = DetailWindowController(rootView: detailView)
-         controller.window?.title = "Comics";
+         controller.window?.title = "comics".localized();
          controller.showWindow(nil)
         
         NSApp.setActivationPolicy(.regular)
@@ -82,12 +86,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func didTapSettings() {
-        //fatalError()
-        
         changeStatusBarButton(number: 2)
         let settingsView = SettingsView();
          let controller = DetailWindowController(rootView: settingsView)
-         controller.window?.title = "Settings";
+         controller.window?.title = "settings".localized();
          controller.showWindow(nil)
         
         NSApp.setActivationPolicy(.regular)

@@ -25,9 +25,9 @@ final class ComicsViewModel: ViewModel {
           await loadComics()
         }
     }
-
 }
 
+// MARK: - Load Comics -
 extension ComicsViewModel {
     func loadComics(from offset: Int = 0) async {
         state = .loading

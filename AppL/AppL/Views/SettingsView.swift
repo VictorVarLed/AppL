@@ -14,9 +14,9 @@ struct SettingsView: View {
             Image(systemName: "gear")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Settings")
+            Text("settings")
             LaunchAtLogin.Toggle {
-                Text("Launch at login")
+                Text("launch")
             }
         }
         .padding()

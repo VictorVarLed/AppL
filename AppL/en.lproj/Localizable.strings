@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  AppL
+
+  Created by Víctor Varillas Ledesma on 22/3/24.
+  
+*/
+"comics" = "Comics";
+"settings" = "Settings";
+"launch" = "Launch at startup";
+"noname" = "Unnamed";
+"nodescription" = "No description";
+"quit" = "Quit";
